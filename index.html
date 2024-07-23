@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-conteudo">
+            <div class="titulo">
+                <img src="./imgs/logo.png" alt="">
+                <h1 class="titulo-logo">Minhas Tarefas</h1>
+            </div>
+
+            <div class="pesquisar-div">
+                <input type="text" placeholder="Digite o id do usuário" class="input-pesquisar">
+                <button class="pesquisar"><img src="./imgs/pesquisar.png" alt=""></button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+    <main class="main">
+   
+
+        <section class="lista-tarefas-div">
+            <h1>Lista de tarefas</h1>
+            <div class="carregando"></div>
+            <div class="lista-tarefas">
+                <div class="tarefa">
+                    <div class="tarefa-textos">
+                        <p class="id-usuario">Usuário 1 -</p>
+                        <h2 class="titulo-tarefa">Titulo: </h2>
+                        <p class="descricao">Sem descrição</p>
+                    </div>
+
+                    <div class="tarefa-botaos">
+                        <button class="completar"><img src="./imgs/adicionar.png" alt=""></button>
+                        <button class="editar"><img src="./imgs/editar.png" alt=""></button>
+                        <button class="deletar"><img src="./imgs/deletar.png" alt=""></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="adicionar-div">
+            <h3>Adicione uma nova tarefa</h3>
+            <label for="titulo-input">Título</label>
+            <input type="text" class="titulo-input" id="titulo-input">
+            <label for="descricao-input">Descrição</label>
+            <input type="text" class="descricao-input" id="descricao-input">
+            <button class="adicionar">Adicionar<img src="./imgs/adicionar.png" alt=""></button>
+
+        </section>
+
+
+    </main>
+
+
+    <dialog class="modal-div">
+        <div class="modal-conteudo">
+            <h2>Editar tarefa</h2>
+            <div class="input-editar-div">
+                <p class="texto-editar id-editar">id : </p>
+                <p class="texto-editar user-editar">Usuário: </p>
+                <div class="inputs-modal-div">
+                    <label for="titulo">Título</label>
+                    <input type="text" name="" id="titulo" class="titulo-editar">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" name="" id="descricao" class="descricao-editar">
+                </div>
+            </div>
+            <div class="botaos-editar">
+                <button class="atualizar">Salvar</button>
+                <button class="cancelar-edicao">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
