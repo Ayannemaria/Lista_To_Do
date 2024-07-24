@@ -1,0 +1,324 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    
+}
+
+
+.header{
+    background-color: rgb(255, 41, 41);
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.328);
+}
+
+.header-conteudo{
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    
+}
+.titulo h1{
+    color: white;
+}
+
+.titulo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.pesquisar-div{
+    display: flex;
+}
+.pesquisar-div input{
+    padding: 0 10px;
+    border-radius: 6px 0 0 6px;
+
+}
+
+.pesquisar-div input:focus{
+    outline: none;
+}
+.pesquisar-div button {
+    background-color: rgb(51, 65, 255);
+    border-radius:0 6px 6px 0;
+    padding: 0 10px;
+}
+
+.pesquisar-div button img{
+    width: 40px;
+}
+
+.main{
+    margin: auto;
+    display: flex;
+    height: 90%;
+    gap: 30px;
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 20px 20px 40px 20px ;
+    border-radius: 0 0 5px 5px;
+    flex: 3;
+}
+
+.adicionar-div{
+    border: 1px solid #000;
+    display: flex;
+    flex: 1;
+    height: 50%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 60px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    min-width: 500px;
+}
+
+.adicionar-div input{
+    height: 40px;
+    border: 1px solid #000;
+    padding: 0 10px;
+    border-radius: 6px;
+    margin: 10px 0;
+}
+.adicionar-div h3{
+    text-align: center;
+}
+
+.adicionar-div button {
+    background-color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    color: white;
+}
+.adicionar-div button img{
+    width: 40px;
+}
+
+.lista-tarefas-div{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 10px;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    min-width: 500px;
+  
+}
+
+.lista-tarefas{
+    display: flex;
+    overflow-y: scroll;
+  
+}
+.lista-tarefas-div h1 {
+    text-align: center;
+    margin: 10px 0 20px; 
+  
+
+}
+
+.tarefa{
+    background-color: rgba(196, 196, 196, 0.386);
+    display: flex;
+    border-radius: 6px;
+    flex: 1;
+    padding: 20px 20px ;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tarefa-textos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+.id-e-titulo{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+}
+.descricao{
+    margin: 20px 0 20px 0;
+}
+.tarefa-botaos{
+    display: flex;
+}
+.tarefa-botaos button{
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.completar {
+    background-color: lime;
+}
+.editar {
+    background-color: rgb(45, 129, 255);
+}
+.deletar{
+    background-color: rgb(255, 28, 28);
+}
+
+.tarefa-botaos button img{
+    width: 100%;
+}
+
+
+.carregando {
+    border: 5px solid #b4b4b4;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 45%;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.modal-div::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.5);
+    animation: fadeIn .5s;
+}
+
+.modal-div {
+    text-align: center;
+    margin: auto;
+    width: 35%;
+    padding: 12px;
+    border-radius: 6px;
+    animation: slideIn .5s;
+}
+
+.modal-div h2{
+    text-align: center;
+}
+
+
+.texto-editar{
+    background-color: #ccc;
+    padding:  10px;
+    margin: 10px 0 ;
+    border-radius: 4px;
+}
+
+
+.inputs-modal-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+.input-editar-div input{
+    background-color: #eaeaea;
+    padding: 15px 5px;
+    border-radius: 4px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+}
+.botaos-editar{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.botaos-editar button {
+    flex: 1;
+    padding: 17px 0;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+}
+.atualizar {
+    background-color: lime;
+}
+.cancelar-edicao{
+    background-color: red;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+    
+    .header-conteudo{
+        justify-content: space-around;
+    }
+    .titulo{
+        margin-bottom: 10px;
+    }
+    .lista-tarefas-div{
+        flex: 1;
+        min-width: 300px;
+    }
+    .adicionar-div{
+        min-width: 300px;
+    }
+    .main{
+        padding-inline: 0;
+        flex-direction: row-reverse;
+    }
+    .modal-div{
+        width: 90%;
+    }
+    .tarefa{
+        flex-direction: column;
+    }
+}
