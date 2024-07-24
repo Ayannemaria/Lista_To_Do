@@ -441,7 +441,7 @@ async function pegarTarefasDeUmUser(userId) {
         document.querySelectorAll(".deletar").forEach((item, index) => {
 
             item.onclick = () => {
-                deletarTarefa(data[index].id);
+                deletarTarefa(resposta[index].id);
                 const pai = item.parentElement.parentElement;
                 pai.remove();
             }
